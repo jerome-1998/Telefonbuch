@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TelefonBuchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KontaktListe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="VorName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NachName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NummerR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="TelefonBuchContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KontaktListe" EntityType="Self.KontaktListe" />
+  </EntityContainer>
+</Schema>
